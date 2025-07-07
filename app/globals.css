@@ -11,8 +11,6 @@
     background: linear-gradient(135deg, #111827 0%, #000000 50%, #111827 100%);
     color: #ffffff;
     font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-   cursor: pointer;
-
   }
 }
 
@@ -340,7 +338,4 @@ select:focus {
   .text-gray-300 {
     color: #f3f4f6;
   }
-}
-* {
-  cursor: url('/custom-cursor.png'), auto;
 }

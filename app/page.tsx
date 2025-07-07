@@ -14,7 +14,6 @@ import {
   Code,
   Palette,
   Smartphone,
-  ExternalLink,
   Download,
   Send,
   Heart,
@@ -26,6 +25,7 @@ import {
   Sparkles,
   Rocket,
   Coffee,
+  BookOpen,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -319,7 +319,7 @@ export default function AestheticPortfolio() {
 
             <div className="relative lg:justify-self-end">
               <div className="relative z-10 transform hover:scale-105 transition-transform duration-700">
-                <div className="w-96 h-96 lg:w-[450px] lg:h-[450px] mx-auto relative">
+                <div className="w-80 h-80 lg:w-96 lg:h-96 mx-auto relative">
                   {/* Enhanced Animated Rings */}
                   <div className="absolute inset-0 border-2 border-purple-400/30 rounded-full animate-spin-slow"></div>
                   <div className="absolute inset-6 border border-pink-400/30 rounded-full animate-spin-reverse"></div>
@@ -329,13 +329,14 @@ export default function AestheticPortfolio() {
                   {/* Glowing Background */}
                   <div className="absolute inset-20 bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-blue-500/20 rounded-full blur-xl"></div>
 
-                  {/* Profile Image */}
-                  <img
-                    src="IMG_1431.png"
-                    alt="Harshwardhan - Digital Craftsman"
-                    className=" mx-auto w-[300px] h-[300px] absolute inset-24 w-full h-full object-cover rounded-full shadow-2xl shadow-purple-500/25 border-4 border-white/10 backdrop-blur-sm"
-                     style={{ transform: 'translateY(-6%) translateX(-6%)' }}
-                  />
+                  {/* Profile Image - Reduced size and properly centered */}
+                  <div className="absolute inset-20 rounded-full overflow-hidden border-4 border-white/10 backdrop-blur-sm shadow-2xl shadow-purple-500/25">
+                    <img
+                      src="IMG_1431.png"
+                      alt="Harshwardhan - Digital Craftsman"
+                      className="w-full h-full object-cover object-center"
+                    />
+                  </div>
 
                   {/* Floating Orbs */}
                   <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-bounce shadow-lg shadow-purple-400/50"></div>
@@ -343,20 +344,20 @@ export default function AestheticPortfolio() {
                 </div>
               </div>
 
-              {/* Enhanced Floating Tech Icons */}
-              <div className="absolute top-16 right-16 animate-bounce">
-                <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-3xl flex items-center justify-center shadow-2xl shadow-purple-500/25 border border-white/10 backdrop-blur-sm">
-                  <Code className="w-10 h-10 text-white" />
+              {/* Enhanced Floating Tech Icons - Reduced size and repositioned */}
+              <div className="absolute top-8 right-8 animate-bounce z-20">
+                <div className="w-14 h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-purple-500/25 border border-white/10 backdrop-blur-sm">
+                  <Code className="w-7 h-7 text-white" />
                 </div>
               </div>
-              <div className="absolute bottom-16 left-16 animate-bounce animation-delay-500">
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl flex items-center justify-center shadow-2xl shadow-blue-500/25 border border-white/10 backdrop-blur-sm">
-                  <Palette className="w-10 h-10 text-white" />
+              <div className="absolute bottom-8 left-8 animate-bounce animation-delay-500 z-20">
+                <div className="w-14 h-14 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-blue-500/25 border border-white/10 backdrop-blur-sm">
+                  <Palette className="w-7 h-7 text-white" />
                 </div>
               </div>
-              <div className="absolute top-1/2 left-0 animate-bounce animation-delay-1000">
-                <div className="w-16 h-16 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-3xl flex items-center justify-center shadow-2xl shadow-emerald-500/25 border border-white/10 backdrop-blur-sm">
-                  <Monitor className="w-8 h-8 text-white" />
+              <div className="absolute top-1/2 -left-8 animate-bounce animation-delay-1000 z-20">
+                <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-2xl flex items-center justify-center shadow-2xl shadow-emerald-500/25 border border-white/10 backdrop-blur-sm">
+                  <Monitor className="w-6 h-6 text-white" />
                 </div>
               </div>
             </div>
@@ -381,19 +382,37 @@ export default function AestheticPortfolio() {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative group">
-              <div className="absolute -inset-6 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl opacity-50 group-hover:opacity-75 transition-all duration-500 blur-xl"></div>
-              <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-white/10 rounded-3xl p-2 shadow-2xl">
-                <img
-                  src="20250310_153116365_iOS_11zon.jpg"
-                  alt="The Craftsman at Work"
-                  className="w-full rounded-2xl shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
-                  
-                />
+            {/* Second Image - Repositioned and resized */}
+            {/* Second Image - Two stacked images */}
+            <div className="relative group order-2 lg:order-1 flex flex-col space-y-8">
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-3xl opacity-50 group-hover:opacity-75 transition-all duration-500 blur-xl"></div>
+                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
+                  <div className="w-full aspect-square rounded-2xl overflow-hidden">
+                    <img
+                      src="1234.png"
+                      alt="The Craftsman at Work"
+                      className="w-100px h-100px object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-3xl opacity-50 group-hover:opacity-75 transition-all duration-500 blur-xl"></div>
+                <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl border border-white/10 rounded-3xl p-3 shadow-2xl">
+                  <div className="w-full aspect-square rounded-2xl overflow-hidden">
+                    <img
+                      src="20250310_153116365_iOS_11zon.jpg"
+                      alt="Digital Innovation"
+                      className=" w-25 h-25 object-cover object-center transform group-hover:scale-105 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-8 order-1 lg:order-2">
               <div className="space-y-6">
                 <h3 className="text-4xl font-bold text-white">Digital Craftsman & Code Artist</h3>
                 <p className="text-xl text-gray-300 leading-relaxed">
@@ -402,17 +421,18 @@ export default function AestheticPortfolio() {
                   matter. Every line of code is crafted with passion, every pixel placed with purpose.
                 </p>
                 <p className="text-lg text-gray-400 leading-relaxed">
-                  Currently mastering the art of full-stack development at Quantum University while creating digital
-                  masterpieces that push the boundaries of what's possible on the web.
+                  Currently pursuing my B.Tech in Computer Science at Quantum University while learning and creating
+                  digital masterpieces that push the boundaries of what's possible on the web.
                 </p>
               </div>
 
+              {/* Updated stats for student */}
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { number: "50+", label: "Projects Crafted", icon: Rocket },
-                  { number: "3+", label: "Years Experience", icon: Star },
-                  { number: "100%", label: "Client Satisfaction", icon: Heart },
-                  { number: "24/7", label: "Coding Passion", icon: Coffee },
+                  { number: "20+", label: "Projects Built", icon: Rocket },
+                  { number: "2+", label: "Years Learning", icon: BookOpen },
+                  { number: "100%", label: "Passion Driven", icon: Heart },
+                  { number: "24/7", label: "Coding Journey", icon: Coffee },
                 ].map((stat, index) => (
                   <div
                     key={index}
@@ -426,12 +446,12 @@ export default function AestheticPortfolio() {
               </div>
 
               <div className="space-y-6">
-                <h4 className="text-2xl font-bold text-white mb-4">My Superpowers</h4>
+                <h4 className="text-2xl font-bold text-white mb-4">My Learning Progress</h4>
                 {[
-                  { skill: "Frontend Wizardry", percentage: 95, color: "from-purple-500 to-pink-500" },
-                  { skill: "Backend Mastery", percentage: 88, color: "from-blue-500 to-cyan-500" },
-                  { skill: "Design Artistry", percentage: 92, color: "from-emerald-500 to-teal-500" },
-                  { skill: "Problem Solving", percentage: 96, color: "from-orange-500 to-red-500" },
+                  { skill: "Frontend Development", percentage: 85, color: "from-purple-500 to-pink-500" },
+                  { skill: "Backend Development", percentage: 75, color: "from-blue-500 to-cyan-500" },
+                  { skill: "UI/UX Design", percentage: 80, color: "from-emerald-500 to-teal-500" },
+                  { skill: "Problem Solving", percentage: 90, color: "from-orange-500 to-red-500" },
                 ].map((item, index) => (
                   <div key={index} className="space-y-3">
                     <div className="flex justify-between items-center">
@@ -459,7 +479,7 @@ export default function AestheticPortfolio() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Removed Performance Optimization */}
       <section id="services" className="py-32 relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
@@ -520,14 +540,6 @@ export default function AestheticPortfolio() {
                 technologies: ["Shopify", "WooCommerce", "Stripe", "PayPal"],
                 highlight: "Revenue Focused",
               },
-              {
-                icon: Zap,
-                title: "Performance Optimization",
-                description: "Supercharging websites for lightning-fast loading and superior user experience.",
-                color: "from-yellow-500 to-orange-500",
-                technologies: ["Lighthouse", "Core Web Vitals", "SEO", "Analytics"],
-                highlight: "Speed Demon",
-              },
             ].map((service, index) => (
               <Card
                 key={index}
@@ -573,7 +585,7 @@ export default function AestheticPortfolio() {
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Portfolio Section - Restored to previous version */}
       <section id="portfolio" className="py-32 bg-gradient-to-b from-gray-900/50 to-transparent relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
@@ -652,21 +664,14 @@ export default function AestheticPortfolio() {
                           </span>
                         ))}
                       </div>
-                      <div className="flex space-x-3">
-                        <Button
-                          size="sm"
-                          className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 rounded-xl font-semibold group"
-                        >
-                          <ExternalLink className="mr-2 w-4 h-4 group-hover:rotate-45 transition-transform duration-300" />
-                          Live Demo
-                        </Button>
+                      <div className="flex justify-center">
                         <Button
                           size="sm"
                           variant="outline"
                           className="border-white/30 text-white hover:bg-white/10 hover:border-white/50 rounded-xl bg-transparent backdrop-blur-sm font-semibold group"
                         >
                           <Github className="mr-2 w-4 h-4 group-hover:scale-110 transition-transform duration-300" />
-                          Code
+                          View Code
                         </Button>
                       </div>
                     </div>
@@ -685,7 +690,7 @@ export default function AestheticPortfolio() {
         </div>
       </section>
 
-      {/* Contact Section */}
+      {/* Contact Section - Restored to previous version */}
       <section id="contact" className="py-32 relative">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
@@ -863,60 +868,133 @@ export default function AestheticPortfolio() {
           </div>
         </div>
       </section>
-
       {/* Footer */}
-      <footer className="bg-gradient-to-t from-black to-gray-900 border-t border-white/10 text-white py-16 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-pink-500/5"></div>
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center space-y-8">
-            <a
-              href="#"
-              className="text-4xl font-black bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 inline-block"
-            >
-              Harshwardhan
-            </a>
-
-            <div className="flex justify-center space-x-10 text-lg">
-              {[
-                { name: "Home", id: "hero" },
-                { name: "Story", id: "about" },
-                { name: "Magic", id: "services" },
-                { name: "Creations", id: "portfolio" },
-                { name: "Connect", id: "contact" },
-              ].map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-400 hover:text-white transition-colors duration-300 font-medium hover:scale-105 transform"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
-
-            <div className="flex justify-center space-x-6">
-              {[
-                { icon: Linkedin, href: "https://www.linkedin.com/in/harsh-wardhan-5372a7279", label: "LinkedIn" },
-                { icon: Github, href: "https://github.com/harshqu", label: "GitHub" },
-                { icon: Instagram, href: "#", label: "Instagram" },
-                { icon: Twitter, href: "https://x.com/Harsh_1437", label: "Twitter" },
-              ].map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-12 h-12 bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl flex items-center justify-center text-gray-400 hover:text-white hover:bg-purple-500/20 hover:border-purple-400/50 transform hover:scale-110 hover:-translate-y-1 transition-all duration-300"
-                >
-                  <social.icon size={20} />
-                </a>
-              ))}
-            </div>
-
-            <div className="pt-8 border-t border-white/10">
-              <p className="text-gray-400 flex items-center justify-center text-lg">
-                Crafted with <Heart className="w-5 h-5 text-red-500 mx-2 animate-pulse" /> by Harshwardhan © 2024
+      <footer className="py-16 bg-gradient-to-b from-gray-900/50 to-black relative">
+        <div className="container mx-auto px-6">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            <div className="space-y-6">
+              <div className="text-2xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                Harshwardhan
+              </div>
+              <p className="text-gray-400 leading-relaxed">
+                Crafting digital experiences that blend innovation with artistry. Let's build something amazing
+                together.
               </p>
-              <p className="text-gray-500 mt-2">Turning dreams into digital reality</p>
+              <div className="flex space-x-4">
+                {[
+                  {
+                    icon: Linkedin,
+                    href: "https://www.linkedin.com/in/harsh-wardhan-5372a7279",
+                    color: "hover:bg-blue-600",
+                  },
+                  {
+                    icon: Github,
+                    href: "https://github.com/harshqu",
+                    color: "hover:bg-gray-700",
+                  },
+                  {
+                    icon: Instagram,
+                    href: "#",
+                    color: "hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600",
+                  },
+                  {
+                    icon: Twitter,
+                    href: "https://x.com/Harsh_1437",
+                    color: "hover:bg-blue-500",
+                  },
+                ].map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className={`w-10 h-10 bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl flex items-center justify-center text-gray-400 ${social.color} hover:text-white transform hover:scale-110 transition-all duration-300`}
+                  >
+                    <social.icon size={18} />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-white">Quick Links</h4>
+              <ul className="space-y-3">
+                {[
+                  { name: "Home", id: "hero" },
+                  { name: "About", id: "about" },
+                  { name: "Services", id: "services" },
+                  { name: "Portfolio", id: "portfolio" },
+                  { name: "Contact", id: "contact" },
+                ].map((link) => (
+                  <li key={link.name}>
+                    <button
+                      onClick={() => scrollToSection(link.id)}
+                      className="text-gray-400 hover:text-purple-400 transition-colors duration-300"
+                    >
+                      {link.name}
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-white">Services</h4>
+              <ul className="space-y-3 text-gray-400">
+                <li className="hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                  Full-Stack Development
+                </li>
+                <li className="hover:text-purple-400 transition-colors duration-300 cursor-pointer">UI/UX Design</li>
+                <li className="hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                  Mobile Development
+                </li>
+                <li className="hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                  Backend Architecture
+                </li>
+                <li className="hover:text-purple-400 transition-colors duration-300 cursor-pointer">
+                  E-Commerce Solutions
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="text-lg font-bold text-white">Get In Touch</h4>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-purple-400" />
+                  <a
+                    href="mailto:harshwardhanpvt@gmail.com"
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
+                  >
+                    harshwardhanpvt@gmail.com
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-purple-400" />
+                  <a href="tel:+918210326930" className="text-gray-400 hover:text-white transition-colors duration-300">
+                    +91 8210326930
+                  </a>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-purple-400" />
+                  <span className="text-gray-400">Quantum University, Roorkee</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              <p className="text-gray-400 text-center md:text-left">
+                © 2024 Harshwardhan. All rights reserved. Made with <Heart className="w-4 h-4 inline text-red-400" />{" "}
+                and lots of ☕
+              </p>
+              <div className="flex space-x-6 text-sm">
+                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+                  Privacy Policy
+                </a>
+                <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-300">
+                  Terms of Service
+                </a>
+              </div>
             </div>
           </div>
         </div>
