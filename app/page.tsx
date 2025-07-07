@@ -984,7 +984,7 @@ export default function AestheticPortfolio() {
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
               <p className="text-gray-400 text-center md:text-left">
-                © 2024 Harshwardhan. All rights reserved. Made with <Heart className="w-4 h-4 inline text-red-400" />{" "}
+                © 2025 Harshwardhan. All rights reserved. Made with <Heart className="w-4 h-4 inline text-red-400" />{" "}
                 and lots of ☕
               </p>
               <div className="flex space-x-6 text-sm">
